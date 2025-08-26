@@ -40,3 +40,13 @@ With this code, your ESP32 continuously broadcasts BLE advertisement packets tha
 3. Select the correct **Port** (after installing USB drivers if needed)  
 4. Upload the code to ESP32  
 5. Open **Serial Monitor (115200 baud)** → you should see:  
+6. Open the BLE scanner app on your phone → scan for beacons → your ESP32 should appear!  
+
+---
+
+## ✨ Customization
+You can change the UUID, Major, and Minor values in the code:  
+```cpp
+#define BEACON_UUID "12345678-1234-5678-1234-56789abcdef0"
+oBeacon.setMajor(1);
+oBeacon.setMinor(1);
